@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Users } from './mock/Users';
 import UserList from './components/UserList/UserList';
 import UserForm from './components/UserForm/UserForm';
+import { Fragment } from 'react';
 
 function App() {
 
@@ -17,10 +18,10 @@ function App() {
   }
 
   return (
-    <div>
+    <Fragment>
       <UserForm onAddUser={addUserHandler}></UserForm>
       <UserList users={state.users}/>
-    </div>
+    </Fragment>
   )
 }
 
